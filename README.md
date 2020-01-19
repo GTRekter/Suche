@@ -25,7 +25,7 @@ File **appsettings.json**
 ```
 
 ## Example to get an Auth0 Access Token
-'''
+```
 HttpResponseMessage response = null;
 TokenResponse token = null;
 var tokenResponse = GetAccessToken();
@@ -54,9 +54,9 @@ private static HttpResponseMessage GetAccessToken()
     client.BaseAddress = new Uri("APPLICATION_URL");
     return client.PostAsync("oauth/token", httpContent).GetAwaiter().GetResult();
 }
-'''
+```
 ## Example to Azure search
-'''
+```
 string searchText = "Microsoft";
 response = SearchCategories(searchText, token);
 Console.WriteLine($"Method: {response.RequestMessage.Method}");
@@ -81,4 +81,4 @@ private static HttpResponseMessage SearchCategories(string searchText, TokenResp
     client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(token.Token_type, token.Access_token);
     return client.PostAsync("categories/search", httpContent).GetAwaiter().GetResult();
 }
-'''
+```
