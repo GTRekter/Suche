@@ -23,6 +23,14 @@ File **appsettings.json**
     //"SearchServiceEndpoint": "AWS_ELASTIC_SEARCH_SERVICE_ENDPOINT"
 }
 ```
+## Performances
+Performances executing the same search query on the same **35,543 documents**.
+
+Property | Azure Cognitive Search | AWS Elasticsearch
+------------ | ------------ | -------------
+First time byte | ## | 329.96400000000006
+Response time | ## | 330.10200000000003
+
 
 ## Example to get an Auth0 Access Token
 ```
